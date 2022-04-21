@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import { useState } from "react";
 import classes from "./MyPost.module.css";
 
 const PostForm = ({ create }) => {

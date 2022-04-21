@@ -16,20 +16,15 @@ export const Jogs = () => {
   };
   return (
     <div className={classes.jogs_container}>
-      <div className={classes.jogs_header}>
-        Date from
-        <input type="date" />
-        Date to
-        <input type="date" />
-      </div>
-
       {posts.map((jog) => (
         <div className={classes.jogs_wrapper} key={jog.date}>
           <div>
             <img style={{ margin: "10px" }} src={JogsImg} alt="" />
           </div>
           <div className={classes.jogs_info}>
-            <div style={{ margin: "0 0 0 10px", color: "#a9a9c5" }}>{jog.date}</div>
+            <div style={{ margin: "0 0 0 10px", color: "#a9a9c5" }}>
+              {jog.date}
+            </div>
             <div
               style={{ margin: "10px", fontWeigh: "bold", color: "#6f6f6f" }}
             >
@@ -52,6 +47,7 @@ export const Jogs = () => {
       <Modal visible={modal} setVisible={setModal}>
         <PostForm create={createPost} />
       </Modal>
+      
       <div className={classes.jogs_add}>
         <img onClick={() => setModal(true)} src={JosgAdd} alt="" />
       </div>

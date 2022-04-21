@@ -10,9 +10,8 @@ import { AuthContext } from "./context/Context";
 import { ContactUs } from "./components/contactUs/ContactUs";
 
 function App() {
-  const [isAuth, setIsAuth] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
   
-
   return (
     <AuthContext.Provider
       value={{

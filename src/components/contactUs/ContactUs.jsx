@@ -1,4 +1,5 @@
 import classes from './ContactUs.module.css'
+
 export const ContactUs = () => {
   return (
     <div className={classes.info_container}>

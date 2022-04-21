@@ -16,6 +16,7 @@
     display: block;
     z-index: 999999;
   }
+  
   .mobile_logo {
     display: flex;
     justify-content: space-between;

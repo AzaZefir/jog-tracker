@@ -1,17 +1,15 @@
-import classes from "./Mobile.module.css";
-import React from "react";
+import classes from "./MobileMenu.module.css";
 import { NavLink } from "react-router-dom";
 import LogoMenu from "./../../../assets/img/logoMenu.png";
 
 export const MobileMenu = ({
   setActiveMobileMenu,
-  setIsMobileModalVisible,
 }) => {
   return (
     <div className={classes.mobile_container}>
       <div className={classes.mobile_wrapper}>
         <div className={classes.mobile_logo}>
-          <img className={classes.mobile_logo_class} src={LogoMenu} alt="" />
+          <img className={classes.mobile_logo_class} src={LogoMenu} alt="logoMenu" />
         </div>
         <div className={classes.mobile_links}>
           <div style={{ marginBottom: "20px" }}>

@@ -1,4 +1,3 @@
-import React from "react";
 import classes from "./Modal.module.css";
 import ModalClose from "./../../../assets/img/cancel.png";
 
