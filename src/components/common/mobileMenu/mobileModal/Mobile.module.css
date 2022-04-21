@@ -1,0 +1,30 @@
+.myMobileModal {
+  display: none;
+}
+@media (max-width: 512px) {
+  .myMobileModal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    padding: 10%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+  }
+  .myMobileModal.activeClass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .myMobileModalClose {
+    position: absolute;
+    left: 85%;
+    bottom: 88%;
+    z-index: 9999999;
+    width: 20px;
+    height: 20px;
+    color: rgb 176 171 171;
+  }
+}

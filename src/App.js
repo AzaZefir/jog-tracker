@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Header } from "./components/header/Header";
+import { Login } from "./components/login/Login";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { Jogs } from "./components/jogs/Jogs";
+import NotFound from "./components/common/notFound/NotFound";
+import { Info } from "./components/info/Info";
+import { useState } from "react";
+import { AuthContext } from "./context/Context";
+import { ContactUs } from "./components/contactUs/ContactUs";
 
 function App() {
+  const [isAuth, setIsAuth] = useState(true);
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthContext.Provider
+      value={{
+        isAuth,
+        setIsAuth,
+      }}
+    >
+      {isAuth ? (
+        <div className="App">
+          <Header />
+          <Routes>
+            <Route index element={<Jogs />} />
+            <Route path="*" element={<Jogs />} />
+
+            <Route path="/info" element={<Info />} />
+
+            <Route path="/contactUs" element={<ContactUs />} />
+
+            <Route path="/notFound" element={<NotFound />} />
+          </Routes>
+          {/* <Navigate to="/jogs" /> */}
+        </div>
+      ) : (
+        <div>
+          <Routes>
+            <Route exact path="/login" element={<Login />} />
+          </Routes>
+            <Navigate to="/login" />
+        </div>
+      )}
+    </AuthContext.Provider>
   );
 }
 

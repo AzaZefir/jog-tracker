@@ -1,0 +1,64 @@
+.notFound_container {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.notFound_container img {
+  width: 100px;
+  height: 100px;
+}
+.notFound_container h1 {
+  color: #a0a0a0;
+  line-height: 29px;
+  font-size: 20px;
+}
+.notFound_container a {
+  width: 15%;
+  height: 20%;
+  border-radius: 20px;
+  border: 2px solid #e990f9;
+  color: #e990f9;
+  background-color: #ffff;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-decoration: none;
+  margin-top: 50px;
+}
+@media (max-width: 512px) {
+  .notFound_container {
+    margin-top: 30%;
+  }
+  .notFound_container h1 {
+    color: #a0a0a0;
+    line-height: 29px;
+    font-size: 30px;
+    margin: 40px;
+  }
+  .notFound_container a {
+    width: 60%;
+    height: 50px;
+    border-radius: 35px;
+    border: 5px solid #e990f9;
+    color: #e990f9;
+    font-size: 20px;
+    font-weight: bold;
+
+    background-color: #ffff;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 5%;
+    text-decoration: none;
+    margin-top: 25%;
+  }
+}
+/* @media (max-width: 960px) {
+  .notFound_container a {
+    width: 30%;
+    height: 40px;
+    padding-top: 2%;
+  }
+} */
