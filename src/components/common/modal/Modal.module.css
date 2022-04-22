@@ -7,7 +7,7 @@
   display: none;
   /* background: rgba(0, 0, 0, 0.5); */
   background: #ffff;
-  z-index: 99999;
+  z-index: 1;
   overflow: auto;
   
 }
