@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import classes from "./Header.module.css";
 import Logo from "./../../assets/img/logo.png";
 import Filter from "./../../assets/img/filter.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { MobileMenu } from "../common/mobileMenu/MobileView";
 import { MobileModal } from "../common/modal/mobileModal/MobileModal";
 import { FilterModal } from "./../common/modal/filterModal/FilterModal";
@@ -22,7 +22,7 @@ export const Header = () => {
           {" "}
           <nav className={classes.header_links}>
             <div>
-              <Link to="/jogs">JOGS</Link>
+              <NavLink className='active' to="/jogs">JOGS</NavLink>
             </div>
             <div>
               <Link to="/info">INFO</Link>

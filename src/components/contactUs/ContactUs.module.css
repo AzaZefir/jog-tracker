@@ -1,19 +1,18 @@
-.info_container{
-    display: flex;
-    justify-content: center;
+.info_container {
+  display: flex;
+  justify-content: center;
   margin-top: 120px;
-    
 }
-.info_wrapper{
-    width: 70%;
-    margin-top: 5%;
+.info_wrapper {
+  width: 70%;
+  margin-top: 5%;
 }
-.info_wrapper span{
-    font-size: 36px;
-    color: #7ed321;
+.info_wrapper span {
+  font-size: 36px;
+  color: #7ed321;
 }
-.info_wrapper p{
-    font-size: 14px;
-    line-height: 24px;
-    color: #a0a0a0;
+.info_wrapper p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #a0a0a0;
 }

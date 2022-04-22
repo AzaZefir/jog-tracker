@@ -1,8 +1,9 @@
 .post_container {
   width: 95%;
+  margin-top: 60px;
 }
 .item {
-  margin: 40px 6% 0 6%;
+  margin: 60px 6% 0 6%;
   display: flex;
 }
 .item button {
@@ -28,11 +29,17 @@
   border: 1px solid #ffff;
 }
 @media (max-width: 512px) {
+  .post_container {
+    margin-top: 40px;
+  }
   .modal_input {
     flex-direction: column;
   }
   .textArea {
     height: 30px;
     width: 100%;
+  }
+  .item {
+    margin: 40px 6% 0 6%;
   }
 }
