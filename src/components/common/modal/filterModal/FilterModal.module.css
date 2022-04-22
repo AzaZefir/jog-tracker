@@ -1,12 +1,11 @@
 .myMobileModal {
   position: fixed;
-  top: 0;
+  top: 18%;
   bottom: 0;
   right: 0;
   left: 0;
   display: none;
   z-index: 99999;
-  overflow: unset;
 }
 
 .myMobileModalContent {
@@ -21,24 +20,21 @@
 
 .myMobileModal.activeClass {
   display: flex;
-
-  margin-top: 7%;
 }
 @media (max-width: 512px) {
   .myMobileModalContent {
     width: 100%;
-    margin-top: 16%;
   }
   .myMobileModalContent img {
     position: relative;
     left: 95%;
     bottom: 90%;
   }
-  .myMobileModal.activeClass {
+  /* .myMobileModal.activeClass {
     margin-top: 3%;
-  }
+  } */
 }
-@media (max-width: 1240px) {
+/* @media (max-width: 1240px) {
   .myMobileModal.activeClass {
     margin-top: 9%;
   }
@@ -48,4 +44,4 @@
     margin-top: 10%;
   }
 }
-
+ */

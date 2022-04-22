@@ -12,6 +12,7 @@ import { ContactUs } from "./components/contactUs/ContactUs";
 function App() {
   const [isAuth, setIsAuth] = useState(false);
   
+
   return (
     <AuthContext.Provider
       value={{
@@ -24,22 +25,21 @@ function App() {
           <Header />
           <Routes>
             <Route index element={<Jogs />} />
-            <Route path="*" element={<Jogs />} />
 
             <Route path="/info" element={<Info />} />
 
             <Route path="/contactUs" element={<ContactUs />} />
 
             <Route path="/notFound" element={<NotFound />} />
+            <Route path="*" element={<Jogs />} />
           </Routes>
-          {/* <Navigate to="/jogs" /> */}
         </div>
       ) : (
         <div>
           <Routes>
-            <Route exact path="/login" element={<Login />} />
-          </Routes>
-            <Navigate to="/login" />
+              <Route exact path="/login" element={<Login />} />
+              <Route path="*" element={<Navigate to="/login" />} />
+          </Routes>  
         </div>
       )}
     </AuthContext.Provider>

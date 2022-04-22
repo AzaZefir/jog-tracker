@@ -4,6 +4,7 @@
   background-color: #7ed321;
   align-items: center;
   height: 100px;
+  visibility: visible;
 }
 .mobile_menu {
   display: none;
@@ -60,7 +61,7 @@
     visibility: visible;
   }
   .filter_image img {
-    margin-left: 110%;
+    margin-left: 90%;
   }
   .mobile_filter {
     width: 60%;

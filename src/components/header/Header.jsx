@@ -33,7 +33,7 @@ export const Header = () => {
           </nav>
           <div className={classes.filter_image}>
             <img
-              src={(Filter = !filterVisible ? Filter : FilterActive)}
+              src={(!filterVisible ? Filter : FilterActive)}
               alt="filter"
               onClick={() => setFilterVisible(true)}
             />
@@ -49,7 +49,7 @@ export const Header = () => {
         mobileModalVisible={activeMobileMenu}
         setIsMobileModalVisible={setActiveMobileMenu}
       >
-        <MobileMenu />
+        <MobileMenu setActiveMobileMenu={setActiveMobileMenu} />
       </MobileModal>
 
       <FilterModal

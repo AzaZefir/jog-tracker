@@ -1,5 +1,5 @@
 import classes from "./MobileMenu.module.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LogoMenu from "./../../../assets/img/logoMenu.png";
 
 export const MobileMenu = ({
@@ -13,34 +13,34 @@ export const MobileMenu = ({
         </div>
         <div className={classes.mobile_links}>
           <div style={{ marginBottom: "20px" }}>
-            <NavLink
-              to="/"
+            <Link
+              to="/jogs"
               onClick={() => {
-                setActiveMobileMenu(true);
+                setActiveMobileMenu(false);
               }}
             >
               JOGS
-            </NavLink>
+            </Link>
           </div>
           <div style={{ marginBottom: "20px" }}>
-            <NavLink
+            <Link
               to="/info"
               onClick={() => {
-                setActiveMobileMenu(true);
+                setActiveMobileMenu(false);
               }}
             >
               INFO
-            </NavLink>
+            </Link>
           </div>
           <div>
-            <NavLink
+            <Link
               to="/contactUs"
               onClick={() => {
-                setActiveMobileMenu(true);
+                setActiveMobileMenu(false);
               }}
             >
               CONTACT US
-            </NavLink>
+            </Link>
           </div>
         </div>
       </div>
