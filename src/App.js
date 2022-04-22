@@ -31,6 +31,7 @@ function App() {
             <Route path="/contactUs" element={<ContactUs />} />
 
             <Route path="/notFound" element={<NotFound />} />
+            
             <Route path="*" element={<Jogs />} />
           </Routes>
         </div>

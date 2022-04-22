@@ -1,6 +1,6 @@
 .myModal {
   position: fixed;
-  top: 18%;
+  top: 100px;
   bottom: 0;
   right: 0;
   left: 0;
@@ -9,6 +9,7 @@
   background: #ffff;
   z-index: 99999;
   overflow: auto;
+  
 }
 
 .myModalContent {

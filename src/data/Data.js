@@ -18,18 +18,18 @@ export const jogs = [
       distance: "25",
       speed: "12",
     },
-    // {
-    //   date: "03.04.2022",
-    //   time: "10:49",
-    //   distance: "25",
-    //   speed: "12",
-    // },
-    // {
-    //   date: "04.04.2022",
-    //   time: "10:49",
-    //   distance: "25",
-    //   speed: "12",
-    // },
+    {
+      date: "03.04.2022",
+      time: "10:49",
+      distance: "25",
+      speed: "12",
+    },
+    {
+      date: "04.04.2022",
+      time: "10:49",
+      distance: "25",
+      speed: "12",
+    },
     // {
     //   date: "04.01.2022",
     //   time: "10:49",

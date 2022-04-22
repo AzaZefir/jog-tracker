@@ -33,9 +33,9 @@ export const Header = () => {
           </nav>
           <div className={classes.filter_image}>
             <img
-              src={(!filterVisible ? Filter : FilterActive)}
+              src={(!filterVisible ? Filter : FilterActive )}
               alt="filter"
-              onClick={() => setFilterVisible(true)}
+              onClick={() => setFilterVisible(!filterVisible)}
             />
           </div>
         </div>
