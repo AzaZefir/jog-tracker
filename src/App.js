@@ -11,7 +11,8 @@ import { ContactUs } from "./components/contactUs/ContactUs";
 
 function App() {
   const [isAuth, setIsAuth] = useState(false);
-  
+  const [dateTo, setDateTo] = useState(0);
+  const [dateFrom, setDateFrom] = useState(0);
 
   return (
     <AuthContext.Provider
@@ -22,25 +23,30 @@ function App() {
     >
       {isAuth ? (
         <div className="App">
-          <Header />
+          <Header
+            dateTo={dateTo}
+            dateFrom={dateFrom}
+            setDateFrom={setDateFrom}
+            setDateTo={setDateTo}
+          />
           <Routes>
             <Route index element={<Jogs />} />
+
+            <Route path="/jogs" element={<Jogs />} />
 
             <Route path="/info" element={<Info />} />
 
             <Route path="/contactUs" element={<ContactUs />} />
 
-            <Route path="/notFound" element={<NotFound />} />
-            
-            <Route path="*" element={<Jogs />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       ) : (
         <div>
           <Routes>
-              <Route exact path="/login" element={<Login />} />
-              <Route path="*" element={<Navigate to="/login" />} />
-          </Routes>  
+            <Route exact path="/login" element={<Login />} />
+            <Route path="*" element={<Navigate to="/login" />} />
+          </Routes>
         </div>
       )}
     </AuthContext.Provider>

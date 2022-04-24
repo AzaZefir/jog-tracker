@@ -8,7 +8,10 @@ import { MobileModal } from "../common/modal/mobileModal/MobileModal";
 import { FilterModal } from "./../common/modal/filterModal/FilterModal";
 import FilterActive from "./../../assets/img/filter-active.png";
 
-export const Header = () => {
+export const Header = ({
+  setDateFrom,
+  setDateTo,
+}) => {
   const [activeMobileMenu, setActiveMobileMenu] = useState(false);
   const [filterVisible, setFilterVisible] = useState(false);
 
@@ -22,7 +25,9 @@ export const Header = () => {
           {" "}
           <nav className={classes.header_links}>
             <div>
-              <NavLink className='active' to="/jogs">JOGS</NavLink>
+              <NavLink className="active" to="/jogs">
+                JOGS
+              </NavLink>
             </div>
             <div>
               <Link to="/info">INFO</Link>
@@ -33,7 +38,7 @@ export const Header = () => {
           </nav>
           <div className={classes.filter_image}>
             <img
-              src={(!filterVisible ? Filter : FilterActive )}
+              src={!filterVisible ? Filter : FilterActive}
               alt="filter"
               onClick={() => setFilterVisible(!filterVisible)}
             />
@@ -58,9 +63,9 @@ export const Header = () => {
       >
         <div className={classes.filter_modal}>
           Date from
-          <input type="date" />
+          <input type="date" onChange={(e) => setDateFrom(e.target.value)} />
           Date to
-          <input type="date" />
+          <input type="date" onChange={(e) => setDateTo(e.target.value)} />
         </div>
       </FilterModal>
     </div>

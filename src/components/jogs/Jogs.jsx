@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./Jogs.module.css";
 import JogsImg from "./../../assets/img/icon.png";
 import JosgAdd from "./../../assets/img/add.png";
@@ -6,9 +6,12 @@ import { Modal } from "../common/modal/Modal";
 import PostForm from "../common/myPost/MyPost";
 import { jogs } from "../../data/Data";
 
-export const Jogs = () => {
+export const Jogs = ({ dateFrom, dateTo }) => {
   const [modal, setModal] = useState(false);
   const [posts, setPosts] = useState(jogs);
+  useEffect(() => {
+    // console.log(dateFrom, dateTo);
+  }, [dateFrom, dateTo]);
 
   const createPost = (newPost) => {
     setPosts([newPost, ...posts]);
@@ -47,7 +50,7 @@ export const Jogs = () => {
       <Modal visible={modal} setVisible={setModal}>
         <PostForm create={createPost} />
       </Modal>
-      
+
       <div className={classes.jogs_add}>
         <img onClick={() => setModal(true)} src={JosgAdd} alt="" />
       </div>

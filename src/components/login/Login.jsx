@@ -2,13 +2,16 @@ import classes from "./Login.module.css";
 import Logo from "./../../assets/img/logo.png";
 import { AuthContext } from "../../context/Context";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
   const { setIsAuth } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const login = (e) => {
     e.preventDefault();
     setIsAuth(true);
+    navigate("/jogs");
   };
 
   return (
